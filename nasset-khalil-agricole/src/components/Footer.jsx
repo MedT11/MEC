@@ -11,8 +11,9 @@ import {
   SimpleGrid,
   Divider,
 } from '@chakra-ui/react'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin, FaLeaf } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook } from 'react-icons/fa'
 import { Link as RouterLink } from 'react-router-dom'
+import logo from '../../public/logo.png'
 
 export default function Footer() {
   return (
@@ -35,7 +36,7 @@ export default function Footer() {
                 p={1}
               >
                 <img 
-                  src="/logo.png" 
+                  src={logo} 
                   alt="Centrale Pompe Tunisie" 
                   style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 />
@@ -51,12 +52,6 @@ export default function Footer() {
             <HStack spacing={4} pt={2}>
               <Link href="#" isExternal>
                 <Icon as={FaFacebook} w={5} h={5} _hover={{ color: 'green.300' }} />
-              </Link>
-              <Link href="#" isExternal>
-                <Icon as={FaInstagram} w={5} h={5} _hover={{ color: 'green.300' }} />
-              </Link>
-              <Link href="#" isExternal>
-                <Icon as={FaLinkedin} w={5} h={5} _hover={{ color: 'green.300' }} />
               </Link>
             </HStack>
           </Stack>
@@ -77,17 +72,6 @@ export default function Footer() {
               <Link as={RouterLink} to="/contact" fontSize="sm" _hover={{ color: 'green.300' }}>
                 Contact
               </Link>
-            </Stack>
-          </Stack>
-
-          {/* Products */}
-          <Stack spacing={4}>
-            <Text fontSize="lg" fontWeight="semibold">Nos Produits</Text>
-            <Stack spacing={2}>
-              <Text fontSize="sm" color="whiteAlpha.800">Pompage d'eau</Text>
-              <Text fontSize="sm" color="whiteAlpha.800">Machines agricoles</Text>
-              <Text fontSize="sm" color="whiteAlpha.800">Équipements d'irrigation</Text>
-              <Text fontSize="sm" color="whiteAlpha.800">Outils de ferme</Text>
             </Stack>
           </Stack>
 

@@ -18,6 +18,8 @@ import { Link as RouterLink } from 'react-router-dom'
 import { FaArrowRight, FaPhone, FaCheckCircle, FaCog, FaTint, FaStar, FaTractor } from 'react-icons/fa'
 import { products } from '../data/products'
 import ProductModal from '../components/ProductModal'
+import heroImage from '../../public/HEROPAGE.png'
+import caprariImage from '../../public/CAPRARI P.P.png'
 
 export default function Home() {
   const featuredProducts = products.filter(p => p.featured)
@@ -32,7 +34,7 @@ export default function Home() {
         overflow="hidden"
         minH={{ base: '75vh', md: '85vh' }}
         display="flex"
-        alignItems="center"
+        alignItems="flex-end"
       >
         <Box
           position="absolute"
@@ -40,7 +42,7 @@ export default function Home() {
           left={0}
           right={0}
           bottom={0}
-          bgImage="url('/LOGO2.png')"
+          bgImage={`url('${heroImage}')`}
           bgPosition="center"
           bgRepeat="no-repeat"
           bgSize="cover"
@@ -51,28 +53,12 @@ export default function Home() {
             left: 0,
             right: 0,
             bottom: 0,
-            bg: 'blackAlpha.700',
+            bg: 'blackAlpha.300',
           }}
         />
-        <Container maxW="container.xl" position="relative" zIndex={1}>
-          <VStack spacing={8} align="center" textAlign="center">
-            <Heading
-              color="white"
-              fontSize={{ base: '4xl', md: '6xl', lg: '7xl' }}
-              fontWeight="bold"
-              textShadow="2px 2px 8px rgba(0,0,0,0.5)"
-            >
-              CENTRALE POMPE TUNISIE
-            </Heading>
-            <Text
-              color="white"
-              fontSize={{ base: 'xl', md: '2xl' }}
-              maxW="3xl"
-              textShadow="1px 1px 4px rgba(0,0,0,0.5)"
-            >
-              Spécialiste en équipements de pompage et d'irrigation
-            </Text>
-            <HStack spacing={4} pt={6}>
+        <Container maxW="container.xl" position="relative" zIndex={1} pb={8}>
+          <VStack spacing={6} align="center" textAlign="center">
+            <HStack spacing={4} justifyContent="center" flexWrap="wrap">
               <Button
                 as={RouterLink}
                 to="/products"
@@ -257,17 +243,17 @@ export default function Home() {
             <VStack spacing={12}>
               <VStack spacing={4}>
                 <Badge colorScheme="red" fontSize="md" px={4} py={2} borderRadius="full">
-                  Offres Spéciales
+                  Notre Sélection
                 </Badge>
                 <Heading
                   textAlign="center"
                   fontSize={{ base: '3xl', md: '5xl' }}
                   color="green.dark"
                 >
-                  Promotions en Cours
+                  Notre Offre Spéciale
                 </Heading>
                 <Text textAlign="center" fontSize="xl" color="gray.600" maxW="2xl">
-                  Ne manquez pas nos offres exclusives sur une sélection de produits premium
+                  Découvrez nos meilleures offres et produits exclusifs
                 </Text>
               </VStack>
 
@@ -375,16 +361,13 @@ export default function Home() {
                 p={12}
                 position="relative"
               >
-                <VStack spacing={6} zIndex={1}>
-                  <Box bg="white" px={10} py={8} borderRadius="2xl" boxShadow="2xl">
-                    <Heading fontSize="5xl" color="blue.600" fontWeight="bold" letterSpacing="wider">
-                      CAPRARI
-                    </Heading>
-                  </Box>
-                  <Badge colorScheme="yellow" fontSize="lg" px={6} py={2} borderRadius="full">
-                    Qualité Italienne
-                  </Badge>
-                </VStack>
+                <Image
+                  src={caprariImage}
+                  alt="CAPRARI Excellence"
+                  objectFit="contain"
+                  maxH="400px"
+                  maxW="100%"
+                />
               </Flex>
 
               <VStack align="stretch" spacing={8} p={12} bg="gray.50">

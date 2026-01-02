@@ -19,6 +19,7 @@ import {
   HStack,
 } from '@chakra-ui/react'
 import { FaPhone, FaShoppingCart, FaLeaf, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
+import logo from '../../public/logo.png'
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure()
@@ -101,7 +102,7 @@ export default function Navbar() {
                   flexShrink={0}
                 >
                   <img 
-                    src="/logo.png" 
+                    src={logo} 
                     alt="Centrale Pompe Tunisie Logo" 
                     style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                   />

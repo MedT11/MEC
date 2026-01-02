@@ -172,7 +172,7 @@ export default function Products() {
               >
                 <HStack spacing={3}>
                   <Icon as={FaTint} boxSize={6} />
-                  <Text>Hydraulique</Text>
+                  <Text>Partie hydraulique</Text>
                   {hydrauliqueProducts.length > 0 && (
                     <Badge colorScheme="cyan" fontSize="sm">{hydrauliqueProducts.length}</Badge>
                   )}

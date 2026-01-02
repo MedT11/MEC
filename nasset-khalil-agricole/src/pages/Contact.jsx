@@ -284,53 +284,6 @@ export default function Contact() {
           {/* CEO Contact Info */}
           <VStack spacing={6} align="stretch">
             <Box
-              bg="green.50"
-              p={8}
-              borderRadius="xl"
-              border="2px"
-              borderColor="green.200"
-            >
-              <VStack spacing={4} align="start">
-                <Badge colorScheme="green" fontSize="sm" px={3} py={1}>
-                  Contact Direct
-                </Badge>
-                <Heading size="lg" color="green.dark">
-                  Contactez le Directeur
-                </Heading>
-                <Text color="gray.600" fontSize="lg">
-                  Pour des demandes urgentes ou des projets importants, contactez directement
-                  notre direction.
-                </Text>
-
-                <VStack align="start" spacing={3} pt={4} w="full">
-                  <HStack>
-                    <Icon as={FaUser} color="green.600" />
-                    <VStack align="start" spacing={0}>
-                      <Text fontWeight="semibold">M. NASSET / M. KHALIL</Text>
-                      <Text fontSize="sm" color="gray.600">Directeurs</Text>
-                    </VStack>
-                  </HStack>
-
-                  <HStack>
-                    <Icon as={FaPhone} color="green.600" />
-                    <VStack align="start" spacing={0}>
-                      <Text fontWeight="semibold">+213 XXX XXX XXX</Text>
-                      <Text fontSize="sm" color="gray.600">Ligne directe</Text>
-                    </VStack>
-                  </HStack>
-
-                  <HStack>
-                    <Icon as={FaEnvelope} color="green.600" />
-                    <VStack align="start" spacing={0}>
-                      <Text fontWeight="semibold">direction@nasset-khalil.dz</Text>
-                      <Text fontSize="sm" color="gray.600">Email professionnel</Text>
-                    </VStack>
-                  </HStack>
-                </VStack>
-              </VStack>
-            </Box>
-
-            <Box
               bg="white"
               p={8}
               borderRadius="xl"
