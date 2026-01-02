@@ -22,18 +22,19 @@ export default function Footer() {
       color="white"
       mt="auto"
     >
-      <Container maxW="container.xl" py={10}>
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={8}>
+      <Container maxW="container.xl" py={{ base: 6, md: 10 }} px={{ base: 4, md: 6 }}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={{ base: 6, md: 8 }}>
           {/* Company Info */}
           <Stack spacing={4}>
-            <HStack spacing={3}>
+            <HStack spacing={3} wrap="wrap">
               <Box
-                w="45px"
-                h="45px"
+                w={{ base: '40px', md: '45px' }}
+                h={{ base: '40px', md: '45px' }}
                 borderRadius="md"
                 overflow="hidden"
                 bg="white"
                 p={1}
+                flexShrink={0}
               >
                 <img 
                   src={logo} 
@@ -41,7 +42,7 @@ export default function Footer() {
                   style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 />
               </Box>
-              <Text fontSize="lg" fontWeight="bold">CENTRALE POMPE TUNISIE</Text>
+              <Text fontSize={{ base: 'sm', md: 'lg' }} fontWeight="bold">CENTRALE POMPE TUNISIE</Text>
             </HStack>
             <Text fontSize="sm" color="whiteAlpha.800">
               Centrale Pompe Tunisie

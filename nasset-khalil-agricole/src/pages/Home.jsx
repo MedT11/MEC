@@ -18,7 +18,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import { FaArrowRight, FaPhone, FaCheckCircle, FaCog, FaTint, FaStar, FaTractor } from 'react-icons/fa'
 import { products } from '../data/products'
 import ProductModal from '../components/ProductModal'
-import heroImage from '../../public/HEROPAGE.png'
+import heroImage from '../../public/HEROPAGENEW.png'
 import caprariImage from '../../public/CAPRARI P.P.png'
 
 export default function Home() {
@@ -56,18 +56,18 @@ export default function Home() {
             bg: 'blackAlpha.300',
           }}
         />
-        <Container maxW="container.xl" position="relative" zIndex={1} pb={8}>
+        <Container maxW="container.xl" position="relative" zIndex={1} pb={{ base: 4, md: 8 }} px={{ base: 4, md: 6 }}>
           <VStack spacing={6} align="center" textAlign="center">
-            <HStack spacing={4} justifyContent="center" flexWrap="wrap">
+            <HStack spacing={{ base: 2, md: 4 }} justifyContent="center" flexWrap="wrap">
               <Button
                 as={RouterLink}
                 to="/products"
-                size="lg"
+                size={{ base: 'md', md: 'lg' }}
                 bg="white"
                 color="green.dark"
-                px={10}
-                py={7}
-                fontSize="lg"
+                px={{ base: 6, md: 10 }}
+                py={{ base: 5, md: 7 }}
+                fontSize={{ base: 'sm', md: 'lg' }}
                 rightIcon={<FaArrowRight />}
                 _hover={{
                   transform: 'translateY(-2px)',
@@ -79,14 +79,14 @@ export default function Home() {
               <Button
                 as={RouterLink}
                 to="/contact"
-                size="lg"
+                size={{ base: 'md', md: 'lg' }}
                 variant="outline"
                 color="white"
                 borderColor="white"
                 borderWidth="2px"
-                px={10}
-                py={7}
-                fontSize="lg"
+                px={{ base: 6, md: 10 }}
+                py={{ base: 5, md: 7 }}
+                fontSize={{ base: 'sm', md: 'lg' }}
                 leftIcon={<FaPhone />}
                 _hover={{
                   bg: 'whiteAlpha.200',

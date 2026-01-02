@@ -132,12 +132,12 @@ export default function Products() {
       <Box py={16} bg="gray.50">
         <Container maxW="container.xl">
           <Tabs variant="enclosed" colorScheme="green" size="lg">
-            <TabList mb={10} justifyContent="center" flexWrap="wrap" borderBottom="3px solid" borderColor="gray.200">
+            <TabList mb={10} justifyContent="center" flexWrap="wrap" borderBottom="3px solid" borderColor="gray.200" gap={{ base: 2, md: 4 }}>
               <Tab
-                fontSize={{ base: 'md', md: 'lg' }}
+                fontSize={{ base: 'xs', sm: 'sm', md: 'lg' }}
                 fontWeight="bold"
-                px={8}
-                py={4}
+                px={{ base: 3, md: 8 }}
+                py={{ base: 2, md: 4 }}
                 _selected={{
                   color: 'blue.600',
                   bg: 'white',
@@ -147,20 +147,20 @@ export default function Products() {
                   borderTopColor: 'blue.600',
                 }}
               >
-                <HStack spacing={3}>
-                  <Icon as={FaCog} boxSize={6} />
-                  <Text>Moteurs</Text>
+                <HStack spacing={{ base: 1, md: 3 }}>
+                  <Icon as={FaCog} boxSize={{ base: 4, md: 6 }} />
+                  <Text display={{ base: 'none', sm: 'block' }}>Moteurs</Text>
                   {moteurProducts.length > 0 && (
-                    <Badge colorScheme="blue" fontSize="sm">{moteurProducts.length}</Badge>
+                    <Badge colorScheme="blue" fontSize={{ base: 'xs', md: 'sm' }}>{moteurProducts.length}</Badge>
                   )}
                 </HStack>
               </Tab>
 
               <Tab
-                fontSize={{ base: 'md', md: 'lg' }}
+                fontSize={{ base: 'xs', sm: 'sm', md: 'lg' }}
                 fontWeight="bold"
-                px={8}
-                py={4}
+                px={{ base: 3, md: 8 }}
+                py={{ base: 2, md: 4 }}
                 _selected={{
                   color: 'cyan.600',
                   bg: 'white',
@@ -170,20 +170,20 @@ export default function Products() {
                   borderTopColor: 'cyan.600',
                 }}
               >
-                <HStack spacing={3}>
-                  <Icon as={FaTint} boxSize={6} />
-                  <Text>Partie hydraulique</Text>
+                <HStack spacing={{ base: 1, md: 3 }}>
+                  <Icon as={FaTint} boxSize={{ base: 4, md: 6 }} />
+                  <Text display={{ base: 'none', sm: 'block' }}>Partie hydraulique</Text>
                   {hydrauliqueProducts.length > 0 && (
-                    <Badge colorScheme="cyan" fontSize="sm">{hydrauliqueProducts.length}</Badge>
+                    <Badge colorScheme="cyan" fontSize={{ base: 'xs', md: 'sm' }}>{hydrauliqueProducts.length}</Badge>
                   )}
                 </HStack>
               </Tab>
 
               <Tab
-                fontSize={{ base: 'md', md: 'lg' }}
+                fontSize={{ base: 'xs', sm: 'sm', md: 'lg' }}
                 fontWeight="bold"
-                px={8}
-                py={4}
+                px={{ base: 3, md: 8 }}
+                py={{ base: 2, md: 4 }}
                 _selected={{
                   color: 'purple.600',
                   bg: 'white',
@@ -193,11 +193,11 @@ export default function Products() {
                   borderTopColor: 'purple.600',
                 }}
               >
-                <HStack spacing={3}>
-                  <Icon as={FaStar} boxSize={6} />
-                  <Text>Promotions</Text>
+                <HStack spacing={{ base: 1, md: 3 }}>
+                  <Icon as={FaStar} boxSize={{ base: 4, md: 6 }} />
+                  <Text display={{ base: 'none', sm: 'block' }}>Promotions</Text>
                   {promotionProducts.length > 0 && (
-                    <Badge colorScheme="purple" fontSize="sm">{promotionProducts.length}</Badge>
+                    <Badge colorScheme="purple" fontSize={{ base: 'xs', md: 'sm' }}>{promotionProducts.length}</Badge>
                   )}
                 </HStack>
               </Tab>
